@@ -1,4 +1,9 @@
 import React from "react";
+import TkTab from "../../tkui/tabs/TkTab";
+import TkTabHeaderList from "../../tkui/tabs/TkTabHeaderList";
+import TkTabHeader from "../../tkui/tabs/TkTabHeader";
+import TkTabContentList from "../../tkui/tabs/TkTabContentList";
+import TkTabContent from "../../tkui/tabs/TkTabContent";
 export default class Tabs extends React.Component {
   render() {
     return (
@@ -27,28 +32,32 @@ export default class Tabs extends React.Component {
             <a class="article-anchor" href="#简单示例" aria-hidden="true"></a>
           </h3>
           <div>
-              <ul  class="nav nav-tabs">
-                <li class="nav-item">
-                  <a class="nav-link active" >TAB1</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" >TAB2</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" >TAB3</a>
-                </li>
-              </ul>
-              <div class="tab-content">
-                <div class="tab-pane">
-                  TAB1
-                </div>
-                <div class="tab-pane">
-                  TAB2
-                </div>
-                <div class="tab-pane">
-                  TAB3
-                </div>
-              </div>
+             <TkTab>
+               <TkTabHeaderList>
+                 <TkTabHeader>帮助</TkTabHeader>
+                 <TkTabHeader>API</TkTabHeader>
+                 <TkTabHeader>介绍</TkTabHeader>
+               </TkTabHeaderList>
+               <TkTabContentList>
+                 <TkTabContent>帮助内容</TkTabContent>
+                 <TkTabContent>API内容</TkTabContent>
+                 <TkTabContent>
+                    介绍内容
+                    <TkTab>
+                      <TkTabHeaderList>
+                        <TkTabHeader>帮助</TkTabHeader>
+                        <TkTabHeader>API</TkTabHeader>
+                        <TkTabHeader>介绍</TkTabHeader>
+                      </TkTabHeaderList>
+                      <TkTabContentList>
+                        <TkTabContent>帮助内容</TkTabContent>
+                        <TkTabContent>API内容</TkTabContent>
+                        <TkTabContent>介绍内容</TkTabContent>
+                      </TkTabContentList>
+                    </TkTab>
+                </TkTabContent>
+               </TkTabContentList>
+             </TkTab>
           </div>
         </div>
       </div>
