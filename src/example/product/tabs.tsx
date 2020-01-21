@@ -37,6 +37,21 @@ export default class Tabs extends React.Component {
                  <TkTabHeader>帮助</TkTabHeader>
                  <TkTabHeader>API</TkTabHeader>
                  <TkTabHeader>介绍</TkTabHeader>
+                 <TkTabHeader>介绍</TkTabHeader>
+                 <TkTabHeader>介绍</TkTabHeader>
+                 <TkTabHeader>介绍</TkTabHeader>
+                 <TkTabHeader>介绍</TkTabHeader>
+                 <TkTabHeader>介绍</TkTabHeader>
+                 <TkTabHeader>介绍</TkTabHeader>
+                 <TkTabHeader>介绍</TkTabHeader>
+                 <TkTabHeader>介绍</TkTabHeader>
+                 <TkTabHeader>介绍</TkTabHeader>
+                 <TkTabHeader>介绍</TkTabHeader>
+                 <TkTabHeader>介绍</TkTabHeader>
+                 <TkTabHeader>介绍</TkTabHeader>
+                 <TkTabHeader>介绍</TkTabHeader>
+                 <TkTabHeader>介绍</TkTabHeader>
+                 <TkTabHeader>介绍</TkTabHeader>
                </TkTabHeaderList>
                <TkTabContentList>
                  <TkTabContent>帮助内容</TkTabContent>

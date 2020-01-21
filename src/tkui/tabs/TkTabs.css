@@ -118,6 +118,7 @@
 }
 .tk-tabs .scroll-bar.r{
 	background-image: url('images/icon-right.png');
+	right: 0px;
 }
 .tk-tabs .scroll-bar.l{
 	background-image: url('images/icon-left.png');
