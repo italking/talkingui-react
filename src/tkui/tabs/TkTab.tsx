@@ -1,6 +1,8 @@
 import React from "react";
 import uuid from  "uuid";
 import events from "events";
+import "./TkTabs.css";
+
 export const TkTabContext = React.createContext(null);
 
 export default class TkTab extends React.Component {

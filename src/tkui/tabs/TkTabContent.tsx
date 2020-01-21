@@ -38,7 +38,7 @@ export default class TkTabContent extends React.Component {
     return (
       <>
       {show && 
-        (<div className='tk-tabs-content'>
+        (<div className='tk-tabs-content-element'>
           {this.props.children} 
         </div>)
       }
