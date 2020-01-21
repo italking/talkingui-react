@@ -4,9 +4,10 @@ import {TkTabContext} from "./TkTab";
 
 export default class TkTabHeader extends React.Component {
   static contextType = TkTabContext;
-  emitter
+  emitter;
   index:number;
   tid;
+  li = React.createRef();
   constructor(props){
     super(props);
     this.handClick = this.handClick.bind(this);
@@ -22,7 +23,7 @@ export default class TkTabHeader extends React.Component {
     if(this.index === 0){
       this.setState({active:true});
     }
-    this.context.emitter.on("tab" , (message) =>{
+    this.emitter.on("tab" , (message) =>{
       if(this.index !== message.index){
         this.setState({active:false});
       }
@@ -31,11 +32,11 @@ export default class TkTabHeader extends React.Component {
   }
   handClick(){
     this.setState({active:true});
-    this.emitter.emit('tab' , {index:this.index});
+    this.emitter.emit('tab' , {index:this.index , offsetLeft:this.li.current.offsetLeft , width : this.li.current.offsetWidth});
   }
   render(){
     return (
-      <li class={[this.state.active? 'active': null ]} onClick={this.handClick} >
+      <li ref={this.li} class={[this.state.active? 'active': null ]} onClick={this.handClick} >
          <span>{this.props.children}</span> 
       </li>
     );
